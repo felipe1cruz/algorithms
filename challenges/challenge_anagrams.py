@@ -1,8 +1,8 @@
 def is_anagram(first_string, second_string):
-    first_string_sorted = quick_sort(list(first_string.lower()))
-    second_string_sorted = quick_sort(list(second_string.lower()))
-
-    return first_string_sorted == second_string_sorted
+    first_string_sorted = quick_sort(first_string.lower())
+    second_string_sorted = quick_sort(second_string.lower())
+    is_anagram = first_string_sorted == second_string_sorted
+    return (first_string_sorted, second_string_sorted, is_anagram)
 
 
 def quick_sort(string):
@@ -19,4 +19,4 @@ def quick_sort(string):
         else:
             maiores.append(letter)
 
-        return quick_sort(menores) + [pivo] + quick_sort(maiores)
+    return quick_sort(menores) + [pivo] + quick_sort(maiores)
