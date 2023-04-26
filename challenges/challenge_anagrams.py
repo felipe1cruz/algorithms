@@ -1,7 +1,11 @@
 def is_anagram(first_string, second_string):
-    first_string_sorted = quick_sort(first_string.lower())
-    second_string_sorted = quick_sort(second_string.lower())
+    string_1 = quick_sort(first_string.lower())
+    string_2 = quick_sort(second_string.lower())
+
+    first_string_sorted = "".join(string_1)
+    second_string_sorted = "".join(string_2)
     is_anagram = first_string_sorted == second_string_sorted
+    
     return (first_string_sorted, second_string_sorted, is_anagram)
 
 
